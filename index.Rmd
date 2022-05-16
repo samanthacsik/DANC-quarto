@@ -183,7 +183,7 @@ knitr::include_graphics("media/adc.png")
 ### `r fontawesome::fa("laptop-code", fill = "#5D7E6A", a11y = "sem")` NCEAS + MEDS - learning & teaching data science with colleagues and students
 
 .pull-left[
-```{r echo = FALSE, out.height = '100%', out.width = '100%'}
+```{r echo = FALSE, out.height = '95%', out.width = '95%'}
 knitr::include_graphics("media/meds.jpg")
 ```
 .center[
