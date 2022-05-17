@@ -85,10 +85,9 @@ knitr::include_graphics("media/tallie.jpg")
 ]
 ]
 
-<br>
-<br>
-
 .pull-right[
+<br>
+<br>
 <span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` Master of Ecology, Evolution & Marine Biology, UC Santa Barbara 2020</span>  
 <br>
 <span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` Data Training Coordinator @ the [National Center for Ecological Analysis and Synthesis](https://www.nceas.ucsb.edu/) (NCEAS)</span>  
@@ -200,10 +199,15 @@ knitr::include_graphics("media/meds_ladies.jpg")
 ]
 ]
 
-<span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` 11-month professional master's program administered by Bren in partnership with NCEAS</span>  
+<span style = 'font-size: 80%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` 11-month professional master's program, administered by [Bren](https://bren.ucsb.edu/masters-programs/master-environmental-data-science) in partnership with NCEAS</span>  
 <br>
-<span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` </span>  
+<span style = 'font-size: 80%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` Coursework includes scientific programming, ML, remote sensing, spatial analysis, data viz, and more </span>  
 <br>
+<span style = 'font-size: 80%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` 6-month group capstone project - come watch the Class of 2022 present on May 26! Info [here](https://bren.ucsb.edu/events/2022-meds-capstone-project-presentations)</span>  
+<br>
+<span style = 'font-size: 80%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` Find workshops materials on the [MEDS website for current students](https://ucsb-meds.github.io/workshops.html)</span>  
+<br>
+
 
 ---
 ### Quarto - what even is it??
@@ -213,3 +217,5 @@ knitr::include_graphics("media/meds_ladies.jpg")
 ```{r echo = FALSE, out.height = '100%', out.height = '100%'}
 knitr::include_url("https://quarto.org/")
 ```
+
+If you prefer
