@@ -41,7 +41,7 @@ style_mono_accent(
   base_color = "#5D7E6A",
   white_color = "#ECF5E2", 
   background_color = "#FFFFFF",
-  link_color = "#8D5B99",
+  link_color = "#F28B25", #8D5B99
   text_bold_color = "#5D7E6A",
   header_font_weight = 400,
   header_h1_font_size = "2.25rem",
@@ -144,11 +144,11 @@ knitr::include_graphics("media/rladiesSB.jpg")
 <br>
 <span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` ~5 events/year that cover a variety of topics with a mixed range of difficulty levels</span>  
 <br>
-<span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` Join us on [`r fontawesome::fa("meetup", fill = "#8D5B99", a11y = "sem")` Meetup](https://www.meetup.com/rladies-santa-barbara/)</span>  
+<span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` Join us on [`r fontawesome::fa("meetup", fill = "#F28B25", a11y = "sem")` Meetup](https://www.meetup.com/rladies-santa-barbara/)</span>  
 <br>
-<span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` Follow us on [`r fontawesome::fa("twitter", fill = "#8D5B99", a11y = "sem")` Twitter](https://twitter.com/rladiessb)</span>  
+<span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` Follow us on [`r fontawesome::fa("twitter", fill = "#F28B25", a11y = "sem")` Twitter](https://twitter.com/rladiessb)</span>  
 <br>
-<span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` Access event materials on [`r fontawesome::fa("github", fill = "#8D5B99", a11y = "sem")` GitHub](https://github.com/rladies/meetup-presentations_santabarbara)</span>  
+<span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` Access event materials on [`r fontawesome::fa("github", fill = "#F28B25", a11y = "sem")` GitHub](https://github.com/rladies/meetup-presentations_santabarbara)</span>  
 <br>
 <br>
 ]
@@ -208,14 +208,160 @@ knitr::include_graphics("media/meds_ladies.jpg")
 <span style = 'font-size: 80%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` Find workshops materials on the [MEDS website for current students](https://ucsb-meds.github.io/workshops.html)</span>  
 <br>
 
+---
+class: inverse, middle, center
+
+## Enough about me...let's chat Quarto!
+
+Do you already love RMarkdown? Then Quarto might just be your new best friend.
 
 ---
-### Quarto - what even is it??
+### `r fontawesome::fa("question", fill = "#5D7E6A", a11y = "sem")` Quarto - what even is it?
 
-<span style = 'font-size: 80%;'>Quarto is a publishing tool built on Pandoc (just like RMarkdown), however it's</span>
+<span style = 'font-size: 80%;'>[Quarto](https://quarto.org/) is a publishing tool built on Pandoc (just like RMarkdown). *However*, unlike RMarkdown, it's purposefully built to support multiple languages (R, Python, Julia, Observable JS) and includes lots of exciting new features and capabilities.</span>
 
-```{r echo = FALSE, out.height = '100%', out.height = '100%'}
+.center[
+```{r echo = FALSE, out.height = '80%', out.width = '80%'}
 knitr::include_url("https://quarto.org/")
 ```
+]
 
-If you prefer
+.center[
+<span style = 'font-size: 80%;'>To get started, download and [install Quarto](https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.405/quarto-0.9.405-macos.pkg) and update RStudio to [version v2022.2](https://rstudio.com/products/rstudio/download/).
+</span>
+]
+
+---
+class: inverse, middle, center
+
+### Let's move over to RStudio to demonstrate some of the fun new features available when working with Quarto documents. 
+
+You can follow along by opening up RStudio on your own computer, or check out the following slides, which detail some of what I'll demonstrate. You can also check out the [quarto_key.qmd]() file, which includes examples of all the features we'll cover today. 
+
+ADD LINK TO KEY
+
+---
+### `.Rmd` and `.qmd` files still look very similar
+
+.pull-left[
+```{r echo = FALSE, out.height = '100%', out.width = '100%'}
+knitr::include_graphics("media/RmdTest.png")
+```
+]
+
+.pull-right[
+```{r echo = FALSE, out.height = '100%', out.width = '100%'}
+knitr::include_graphics("media/qmdTest.png")
+```
+]
+
+.center[
+<span style = 'font-size: 80%;'>**Note:** By default, the `.qmd` file YAML specifies `editor: visual`. If you prefer the source editor as your default, update the YAML as `editor: source`.</span>
+]
+
+---
+class: inverse, middle, center
+
+## Some notable differences
+
+---
+### Render, not knit
+
+<span style = 'font-size: 80%;'>You'll see the <img src="media/render.png" alt="A blue horizontal arrow pointing to the right next to the word 'Render'" style="display: inline-block; margin: 0; position: relative; top: 3px; width:60px;height:20px;"/> button, rather than <img src="media/knit.png" alt="A bluish-colored ball of yarn with a knitting needle sticking through the top right side, next to the word 'Knit'" style="display: inline-block; margin: 0; position: relative; top: 3px; width:60px;height:20px;"/> at the top of your `.qmd` file.</span>
+
+.pull-left[
+```{r echo = FALSE, out.height = '100%', out.width = '100%'}
+knitr::include_graphics("media/renderedRmd.png")
+```
+]
+
+.pull-right[
+```{r echo = FALSE, out.height = '100%', out.width = '100%'}
+knitr::include_graphics("media/renderedqmd.png")
+```
+]
+
+.center[
+<span style = 'font-size: 80%;'>Rendered `.qmd` documents have a bit more "modern" feel to them.</span>
+]
+
+---
+
+### Global options now live in the YAML header (goodbye `knitr` setup chunk!)
+
+<span style = 'font-size: 80%;'>For example, to prevent code (but not the results) from appearing in your rendered file as the default, specify `echo: true` in the YAML header of your `.qmd` file:</span>
+
+```{r eval = FALSE}
+---
+title: "My quarto doc title"
+execute:
+  echo: true
+---
+```
+
+<span style = 'font-size: 80%;'>rather than including a `knitr` setup chunk at the top of your `.Rmd` file, just after the YAML:</span>
+
+```{r eval = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+---
+### Introducing chunk options as YAML using the hash pipe, `#|`
+
+<span style = 'font-size: 80%;'>The hash pipe, `#|`, now works in `.Rmd` files as well! It looks something like this:</span>
+
+```{}
+#| echo: false
+#| fig-cap: "Here is my figure caption"
+#| fig-alt: "Here is my very long alt text for my rendered figure"
+ggplot(...) +
+  geom_point()
+```
+
+<span style = 'font-size: 80%;'>as opposed to:</span>
+
+```{}
+{r, echo = FALSE, fig.cap = "Here is my figure caption", fig.alt = "Here is my very long alt text for my rendered figure"}
+ggplot(...) +
+  geom_point()
+```
+
+<span style = 'font-size: 80%;'>**Also note some additional changes:**</span>
+
+<span style = 'font-size: 70%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` we now use `:` rather than `=`, and booleans are lowercase (e.g. `echo: true` rather than `echo = TRUE`)</span>  
+
+<span style = 'font-size: 70%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` use kebab-case for all YAML keys and to delimit figure/layout/code chunk options (e.g. `fig-alt` rather than `fig.alt`)</span>  
+
+---
+class: inverse, center, middle
+
+## Okay, this all seems cool, but I'm comfortable where I'm at right now...do I need to switch??
+
+Short answer: not unless you want to!  
+
+Check out [this post](https://yihui.org/en/2022/04/quarto-r-markdown/) by Yihui Xie for some further insight.
+
+---
+### Want to learn more?
+
+<span style = 'font-size: 80%;'>Come hang with us as we chat about all things Quarto with [Dr. Julie Lowndes](https://jules32.github.io/), Founder and Co-Director of [Openscapes](https://www.openscapes.org/). We'll be joined by members of the [NASA Openscapes Champions Cohort](https://nasa-openscapes.github.io/), who will share their experiences using Quarto to enable data-intensive open science.</span>
+
+<span style = 'font-size: 80%;'>Find more information on the [R-Ladies Santa Barbara Meetup page](https://www.meetup.com/rladies-santa-barbara/events/285849847/) and register on [Eventbrite](https://www.eventbrite.com/e/hello-quarto-tickets-337618986477)!</span>
+
+.center[
+```{r echo = FALSE, out.height = '70%', out.width = '70%'}
+knitr::include_graphics("media/openscapes_event.png")
+```
+]
+
+---
+### In the meantime, check out these other great resources!
+
+<span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` [We don't talk about Quarto](https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/), by Alison Hill</span>  
+<br>
+<span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` [Notes on Changing from RMarkdown/Bookdown to Quarto](https://www.njtierney.com/post/2022/04/11/rmd-to-qmd/), by Nicholas Tierney</span>  
+<br>
+<span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` [Reproducible authoring with Quarto](https://www.youtube.com/watch?v=6p4vOKS6Xls&t=67s) (recorded talk), by Mine Çetinkaya-Rundel</span>  
+<br>
+<span style = 'font-size: 85%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` [Quarto for Scientists](https://github.com/njtierney/qmd4sci) (still under construction! but be sure to check back), by Nicholas Tierney</span>
+
