@@ -1,0 +1,107 @@
+---
+title: "DAnC + Quarto"
+subtitle: "Let's learn some cool Quarto features together!"
+author: "Sam Csik"
+date: May 19, 2022
+format: 
+  html:
+    code-link: true
+    code-fold: false
+    code-tools: true
+execute:
+  warning: false
+  message: false
+  echo: true
+toc: true
+editor: source
+---
+
+## What is Quarto?
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+Here, we'll try out some of the following features:
+
+-   using the Visual and Source editors
+
+-   adding global options to the YAML (along with other YAML)
+
+-   using the hash pipe, `#|`, to specify code chunk options
+
+-   referencing embedded plots/tables in-text
+
+-   displaying plot outputs side-by-side
+
+-   adding callouts and tabsets
+
+-   rendering outputs in the document margin
+
+::: callout-tip
+Switch between the Visual and Source editors to easily try out new features and then learn the associated markdown syntax!
+:::
+
+## Load packages
+
+```{r}
+library(tidyverse)
+```
+
+## Embed outputs (e.g. plots)
+
+::: callout-note
+## This plot still needs updated axis labels!
+
+```{r}
+#| label: fig-mpg
+#| fig-cap: "Here is my mpg fig"
+#| fig-subcap: 
+#| - "Colored by number of cylinders"
+#| - "Colored by displacement, in liters"
+#| fig-alt: "Here is a longer, more detailed alt text description of my figure"
+#| layout-ncol: 2
+#| column: page
+
+ggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +
+  geom_point(alpha = 0.5) + 
+  scale_color_viridis_c()
+
+ggplot(mpg, aes(x = hwy, y = cty, color = displ)) +
+  geom_point(alpha = 0.5) + 
+  scale_color_viridis_c()
+```
+:::
+
+@fig-mpg is my first ever cross-referenced quarto figure and I'm so excited! @fig-mpg-1 is colored by number of cylinders, while @fig-mpg-2 is colored by engine displacement.
+
+## Add tabs
+
+::: panel-tabset
+## my first tab
+
+I can add whatever text I want here, or alternatively embed outputs (e.g. plots, tables, etc.)
+
+## my second tab
+
+Here's a table. They're super easy to insert using the Visual editor. Try doing so using the `Table` drop down menu.
+
+| Col1   | Col2 | Col3 |
+|--------|------|------|
+| We     | 1    | NA   |
+| love   | 2    | NA   |
+| Quarto | 3    | NA   |
+
+: Table 1: Sam's table
+:::
+
+## Render outputs in the margin
+
+```{r}
+#| label: tbl-mtcars
+#| tbl-cap: "The first three columns and rows of the mtcars dataset"
+#| tbl-cap-location: top
+#| column: margin 
+
+knitr::kable(
+  mtcars[1:3, 1:3]
+)
+```

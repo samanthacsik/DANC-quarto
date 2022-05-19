@@ -236,7 +236,7 @@ class: inverse, middle, center
 
 ### Let's move over to RStudio to demonstrate some of the fun new features available when working with Quarto documents. 
 
-You can follow along by opening up RStudio on your own computer, or check out the following slides, which detail some of what I'll demonstrate. You can also check out the [quarto_key.qmd]() file, which includes examples of all the features we'll cover today. 
+You can follow along by opening up RStudio on your own computer, or check out the following slides, which detail some of what I'll demonstrate. You can also reference the [quarto_key.qmd]() file, which includes examples of all the features we'll cover today. 
 
 ADD LINK TO KEY
 
@@ -247,12 +247,18 @@ ADD LINK TO KEY
 ```{r echo = FALSE, out.height = '100%', out.width = '100%'}
 knitr::include_graphics("media/RmdTest.png")
 ```
+.center[
+<span style = 'font-size: 70%;'>`.Rmd` file</span>
+]
 ]
 
 .pull-right[
 ```{r echo = FALSE, out.height = '100%', out.width = '100%'}
 knitr::include_graphics("media/qmdTest.png")
 ```
+.center[
+<span style = 'font-size: 70%;'>`.qmd` file</span>
+]
 ]
 
 .center[
