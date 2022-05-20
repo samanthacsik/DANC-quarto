@@ -244,14 +244,14 @@ class: inverse, middle, center
 
 ### Global options now live in the YAML header (goodbye `knitr` setup chunk!)
 
-&lt;span style = 'font-size: 80%;'&gt;For example, to prevent code (but not the results) from appearing in your rendered file as the default, specify `echo: true` in the YAML header of your `.qmd` file:&lt;/span&gt;
+&lt;span style = 'font-size: 80%;'&gt;For example, to prevent code (but not the results) from appearing in your rendered file as the default for all code chunks, specify `echo: false` in the YAML header of your `.qmd` file:&lt;/span&gt;
 
 
 ```r
 ---
 title: "My quarto doc title"
 execute:
-  echo: true
+  echo: false
 ---
 ```
 
@@ -259,7 +259,7 @@ execute:
 
 
 ```r
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ---

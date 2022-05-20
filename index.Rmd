@@ -295,20 +295,20 @@ knitr::include_graphics("media/renderedqmd.png")
 
 ### Global options now live in the YAML header (goodbye `knitr` setup chunk!)
 
-<span style = 'font-size: 80%;'>For example, to prevent code (but not the results) from appearing in your rendered file as the default, specify `echo: true` in the YAML header of your `.qmd` file:</span>
+<span style = 'font-size: 80%;'>For example, to prevent code (but not the results) from appearing in your rendered file as the default for all code chunks, specify `echo: false` in the YAML header of your `.qmd` file:</span>
 
 ```{r eval = FALSE}
 ---
 title: "My quarto doc title"
 execute:
-  echo: true
+  echo: false
 ---
 ```
 
 <span style = 'font-size: 80%;'>rather than including a `knitr` setup chunk at the top of your `.Rmd` file, just after the YAML:</span>
 
 ```{r eval = FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ---
