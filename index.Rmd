@@ -338,6 +338,10 @@ ggplot(...) +
 
 <span style = 'font-size: 70%;'>`r fontawesome::fa("angle-right", fill = "#5D7E6A", a11y = "sem")` use kebab-case for all YAML keys and to delimit figure/layout/code chunk options (e.g. `fig-alt` rather than `fig.alt`)</span>  
 
+.footnote[
+For more on execution options, check out the [quarto documentation](https://quarto.org/docs/computations/execution-options.html).
+]
+
 ---
 class: inverse, center, middle
 
